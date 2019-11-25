@@ -258,7 +258,6 @@
                                 <configuration>
                                     <configLocation>codestyle/checkstyle.xml</configLocation>
                                     <suppressionsLocation>codestyle/checkstyle-suppressions.xml</suppressionsLocation>
-                                    <linkXRef>false</linkXRef>
                                     <encoding>UTF-8</encoding>
                                     <consoleOutput>true</consoleOutput>
                                     <failOnViolation>true</failOnViolation>
@@ -277,7 +276,7 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
+                    <!--<plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven_javadoc_version}</version>
                         <executions>
@@ -300,8 +299,8 @@
                                 <link>http://docs.oracle.com/javase/7/docs/api</link>
                             </links>
                         </configuration>
-                    </plugin>
-                    <plugin>
+                    </plugin>-->
+                   <!-- <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <executions>
@@ -312,7 +311,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -366,7 +365,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin>
+          <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven_surefire_version}</version>
@@ -375,7 +374,7 @@
                     <forkMode>once</forkMode>
                     <argLine>${argline} ${jacocoArgLine}</argLine>
                     <systemProperties>
-                        <!-- common shared -->
+                        &lt;!&ndash; common shared &ndash;&gt;
                         <property>
                             <name>transporter</name>
                             <value>${transporter}</value>
@@ -384,7 +383,7 @@
                             <name>serialization</name>
                             <value>${serialization}</value>
                         </property>
-                        <!-- server side -->
+                        &lt;!&ndash; server side &ndash;&gt;
                         <property>
                             <name>port</name>
                             <value>${port}</value>
@@ -401,7 +400,7 @@
                             <name>iothreads</name>
                             <value>${iothreads}</value>
                         </property>
-                        <!-- client side -->
+                        &lt;!&ndash; client side &ndash;&gt;
                         <property>
                             <name>server</name>
                             <value>${server}</value>
@@ -436,7 +435,7 @@
                         </property>
                     </systemProperties>
                 </configuration>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
